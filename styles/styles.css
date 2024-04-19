@@ -99,6 +99,7 @@ body {
 {
     fill: var(--blue);
     stroke: var(--blue);
+    cursor: pointer;
 }
 
 /* Stilizare Footer Section*/
