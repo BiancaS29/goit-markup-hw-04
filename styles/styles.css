@@ -24,6 +24,10 @@ img {
     height: auto;
 }
 
+ul {
+    list-style: none;
+}
+
 body {
     font-family: var(--primary-font);
     font-weight: 700;
@@ -54,7 +58,6 @@ body {
 }
 
 .header__navigation ul {
-    list-style: none;
     display: flex;
     gap: 50px;
 }
@@ -86,12 +89,31 @@ body {
     color: var(--medium-grey);
 }
 
+.icon__contact {
+    width: 16px;
+    height: 12px;
+}
+
+.icon__contact:hover,
+.icon__contact:focus
+{
+    fill: var(--blue);
+    stroke: var(--blue);
+}
+
 /* Stilizare Footer Section*/
 
 .footer {
     background-color: var(--dark-grey);
     padding: 60px 0;
 }
+
+.footer .container {
+    display: flex;
+    gap: 94px
+}
+
+/*Stilizare left side*/
 
 .logo-color {
     color: var(--white);
@@ -116,13 +138,46 @@ body {
     margin-bottom: 12px;
 }
 
-.footer__contact p:hover {
-    color: var(--blue);
-}
-
+.footer__contact p:hover,
 .footer__contact p:focus {
     color: var(--blue);
 }
+
+/*Stilizare right side*/
+
+.footer_title {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.footer__list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer__list li {
+    background-color: #FFFFFF1A;
+    padding: 12px;
+    border-radius: 100%;
+}
+
+.footer__list li:hover,
+.footer__list li:focus{
+    background-color: var(--blue);
+    fill: var(--white);
+    stroke: var(--white);
+}
+
+.footer__icon {
+    width: 20px;
+    height: 20px;
+}
+
 
 /* Stilizare Homepage*/
 
@@ -130,6 +185,14 @@ body {
 
 .hero-section {
     background-color: var(--dark-grey);
+    background-image: url(../images/img-hero.jpg),
+    linear-gradient(
+        0deg,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .hero__title {
@@ -168,8 +231,12 @@ body {
     gap: 30px; 
 }
 
-.about__list {
-    list-style: none;
+.about__icon {
+    width: 70px;
+    height: 70px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    background-color: #F5F4FA;;
 }
 
 .about__title {
@@ -215,8 +282,12 @@ body {
     gap: 30px;
 }
 
-.team__img { 
-    background-color: #FFFFFF;;
+.team__card { 
+    background-color: #FFFFFF;
+    box-shadow: 
+    0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .team__title {
@@ -246,6 +317,66 @@ body {
     margin-bottom: 30px;
 }
 
+.team__social {
+    display: flex;
+    justify-content: center;
+    gap:10px;
+    margin-top: 16px;
+    margin-bottom: 30px;
+}
+
+.team__social li {
+    background-color: var(--white);
+    padding: 12px 12px;
+    border-radius: 100%;
+}
+
+.social__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.team__social li:hover,
+.team__social li:focus {
+    background-color: var(--blue);
+    fill: var(--white);
+    stroke: var(--white);
+}
+
+/*Stilizare Customer Section*/
+
+.customer__title {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.customer__list li {
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.customer__icon {
+    width: 106px;
+    height: 60px;
+    padding: 16px 32px;
+}
+
+.customer__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.customer__list li:hover,
+.customer__list li:focus {
+    fill: var(--blue);
+    stroke: var(--blue);
+    border: 1px solid var(--blue);
+}
 /* Stilizare Portofolio*/
 
 /* Stilizare sectiune butoane*/
@@ -270,9 +401,14 @@ body {
     padding: 6px 22px;
 }
 
-.category__button:hover {
+.category__button:hover,
+.category__button:focus {
     background-color: var(--blue);
     color: var(--white);
+    box-shadow:
+    0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.8),
+    0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* Stilizare sectiune proiecte*/
@@ -285,6 +421,13 @@ body {
 
 .project__card {
     border-bottom: 1px solid #EEEEEE;
+}
+
+.project__card:hover {
+    box-shadow:
+    0px 2px 1px 0px rgba(0, 0, 0, 0.16),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.6),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .project__title {
